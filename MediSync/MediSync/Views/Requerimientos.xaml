@@ -6,52 +6,46 @@
         xmlns:local="clr-namespace:MediSync.Views"
         mc:Ignorable="d"
         Title="Requerimientos" Height="450" Width="800">
-    <Grid Background="White" Margin="20">
+    <Grid>
+        <!-- Fila para los controles -->
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Título -->
-        <TextBlock Text="Rastreo de Movimientos "
-          FontSize="18" FontWeight="Bold"
-          HorizontalAlignment="Center" Margin="10"/>
+        <!-- Título de la ventana -->
+        <TextBlock Grid.Row="0" Text="Busqueda de requerimientos" FontSize="18" Margin="10"/>
 
-        <!-- Barra de Búsqueda y Botón Registrar Movimiento -->
-        <Grid Grid.Row="1" Margin="10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="200" />
-            </Grid.ColumnDefinitions>
+        <!-- Controles de filtro -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+            <!-- Filtro de Status -->
+            <TextBlock Text="Status:" VerticalAlignment="Center" Margin="10,0"/>
+            <ComboBox Name="ComboBoxStatus" Width="120">
+                <ComboBoxItem>Todos</ComboBoxItem>
+                <ComboBoxItem>Pendiente</ComboBoxItem>
+                <ComboBoxItem>En Proceso</ComboBoxItem>
+                <ComboBoxItem>Completado</ComboBoxItem>
+            </ComboBox>
 
-            <!-- Campo de búsqueda -->
-            <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Grid.Column="0" Height="35" Padding="5">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="30"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Text="🔍" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <TextBox x:Name="txtBuscarMovimiento" Grid.Column="1" VerticalAlignment="Center"
-                    BorderThickness="0" TextChanged="TxtBuscarMovimiento_TextChanged"/>
-                </Grid>
-            </Border>
+            <!-- Filtro de ID de Pedido -->
+            <TextBlock Text="ID Pedido:" VerticalAlignment="Center" Margin="10,0"/>
+            <TextBox Name="TextBoxPedidoID" Width="120" Margin="10,0" />
 
-            <!-- Botón para Registrar Movimiento -->
-            <Button Content="Buscar" Width="180" Height="35"
-           Grid.Column="1" HorizontalAlignment="Right"
-           Background="#1A5276" Foreground="White" FontWeight="Bold"
-           Click="BtnRegistrarMovimiento_Click"/>
-        </Grid>
+            <!-- Filtro de Usuario -->
+            <TextBlock Text="Usuario:" VerticalAlignment="Center" Margin="10,0"/>
+            <TextBox Name="TextBoxUsuario" Width="120" Margin="10,0" />
+
+            <!-- Botón de filtro -->
+            <Button Content="Filtrar" Width="80" VerticalAlignment="Center" Margin="10,0" Click="BtnFiltrar_Click"/>
+        </StackPanel>
 
         <!-- Tabla de Movimientos -->
         <Border Grid.Row="2" BorderBrush="Gray" BorderThickness=".5" CornerRadius="5" Margin="10">
             <StackPanel>
-                <TextBlock Text="Historial de Movimientos" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="5"/>
+                <TextBlock FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="5"/>
                 <DataGrid x:Name="dgMovimientos" AutoGenerateColumns="False"
-                 Margin="10" Height="300" SelectionMode="Single"
-                 SelectionChanged="DgMovimientos_SelectionChanged">
+                          Margin="10" Height="300" SelectionMode="Single"
+                          SelectionChanged="DgMovimientos_SelectionChanged">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="25"/>
                         <DataGridTextColumn Header="Status" Binding="{Binding Producto}" Width="70"/>
