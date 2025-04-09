@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:MediSync.Views"
         mc:Ignorable="d"
         Title="Categorias" Height="450" Width="800">
+
     <Grid>
-        
+       
     </Grid>
 </Window>
