@@ -54,11 +54,11 @@
                 Foreground="AliceBlue" />
 
             <Button
-                x:Name="CategoriasUsuariosButton"
+                x:Name="CategoriasButton"
                 Height="40"
                 Margin="0,0"
                 Background="#2E5A88"
-                Content="Categorías Usuarios"
+                Content="Categorías"
                 Foreground="AliceBlue" />
 
             <Button
