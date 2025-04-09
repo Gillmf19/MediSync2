@@ -35,7 +35,8 @@
                 Margin="0,0"
                 Background="#2E5A88"
                 Content="Movimientos"
-                Foreground="AliceBlue" />
+                Foreground="AliceBlue"
+                Click="MovimientosButton_Click"/>
 
             <Button
                 x:Name="ProductosButton"
@@ -43,7 +44,8 @@
                 Margin="0,0"
                 Background="#2E5A88"
                 Content="Productos"
-                Foreground="AliceBlue" />
+                Foreground="AliceBlue"
+                Click="ProductosButton_Click"/>
 
             <Button
                 x:Name="ProveedoresButton"
@@ -51,7 +53,8 @@
                 Margin="0,0"
                 Background="#2E5A88"
                 Content="Proveedores"
-                Foreground="AliceBlue" />
+                Foreground="AliceBlue"
+                Click="ProveedoresButton_Click"/>
 
             <Button
                 x:Name="CategoriasButton"
@@ -59,7 +62,8 @@
                 Margin="0,0"
                 Background="#2E5A88"
                 Content="Categorías"
-                Foreground="AliceBlue" />
+                Foreground="AliceBlue"
+                Click="CategoriasButton_Click"/>
 
             <Button
                 x:Name="RolesButton"
@@ -67,7 +71,8 @@
                 Margin="0,0"
                 Background="#2E5A88"
                 Content="Roles"
-                Foreground="AliceBlue" />
+                Foreground="AliceBlue"
+                Click="RolesButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>
