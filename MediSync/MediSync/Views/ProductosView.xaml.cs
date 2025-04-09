@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace MediSync.Views
 {
     /// <summary>
-    /// Lógica de interacción para Productos.xaml
+    /// Lógica de interacción para ProductosView.xaml
     /// </summary>
-    public partial class Productos : Window
+    public partial class ProductosView : UserControl
     {
-        public Productos()
+        public ProductosView()
         {
             InitializeComponent();
         }

@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MediSync.Views;
 
 namespace MediSync
 {
@@ -19,6 +20,12 @@ namespace MediSync
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ProductosButton_Click(object sender, RoutedEventArgs e)
+        {
+            ContenidoPrincipal.Content = new ProductosView(); // Load the Productos UserControl
+
         }
     }
 }
