@@ -14,37 +14,7 @@
         </Grid.RowDefinitions>
 
         <!-- Barra superior con búsqueda y acciones -->
-        <StackPanel Orientation="Horizontal" Margin="10" VerticalAlignment="Top">
-            <!-- Búsqueda -->
-            <Grid Width="300" Height="30">
-                <TextBox x:Name="BuscarTextBox"
-                         TextChanged="BuscarTextBox_TextChanged"
-                         VerticalContentAlignment="Center"/>
-
-            </Grid>
-
-            <Button Content="🔍" Width="30" Height="30" Margin="5,0,10,0"/>
-
-            <!-- Botones de acción -->
-            <Button Content="Agregar" Width="80" Height="30" Margin="0,0,5,0" Background="#2E5A88" Foreground="White"/>
-            <Button Content="Editar" Width="80" Height="30" Margin="0,0,5,0" Background="#2E5A88" Foreground="White"/>
-            <Button Content="Eliminar" Width="80" Height="30" Background="#8B0000" Foreground="White"/>
-        </StackPanel>
 
         <!-- Lista de productos -->
-        <ListView x:Name="ProductosListView" Grid.Row="1" Margin="10">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Nombre" DisplayMemberBinding="{Binding Nombre}" Width="120"/>
-                    <GridViewColumn Header="Código de Barra" DisplayMemberBinding="{Binding CodigoBarra}" Width="120"/>
-                    <GridViewColumn Header="Unidad" DisplayMemberBinding="{Binding UnidadMedida}" Width="100"/>
-                    <GridViewColumn Header="Peso" DisplayMemberBinding="{Binding Peso}" Width="80"/>
-                    <GridViewColumn Header="Volumen" DisplayMemberBinding="{Binding Volumen}" Width="80"/>
-                    <GridViewColumn Header="Caducidad" DisplayMemberBinding="{Binding FechaCaducidad}" Width="120"/>
-                    <GridViewColumn Header="Categoría" DisplayMemberBinding="{Binding Categoria}" Width="100"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
     </Grid>
 </Window>
-

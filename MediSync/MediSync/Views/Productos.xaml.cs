@@ -23,5 +23,10 @@ namespace MediSync.Views
         {
             InitializeComponent();
         }
+
+        private void BuscarTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
