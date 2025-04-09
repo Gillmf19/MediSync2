@@ -1,27 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace MediSync.Views
 {
-    /// <summary>
-    /// Lógica de interacción para Proveedores.xaml
-    /// </summary>
     public partial class Proveedores : Window
     {
         public Proveedores()
         {
             InitializeComponent();
+        }
+
+        // Evento que se dispara cuando se hace clic en el botón "Agregar Proveedor"
+        private void BtnAgregar_Click(object sender, RoutedEventArgs e)
+        {
+            // Abrir la ventana AgregarProveedor como modal
+            AgregarProveedor ventanaAgregarProveedor = new AgregarProveedor();
+            ventanaAgregarProveedor.ShowDialog();  // Usamos ShowDialog() para abrir como ventana modal
         }
     }
 }
