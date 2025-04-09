@@ -9,26 +9,65 @@
     Width="800"
     Height="450"
     mc:Ignorable="d">
+
     <Grid>
         <StackPanel
             x:Name="Dashboard"
             Width="150"
             HorizontalAlignment="Left"
             Background="#2E5A88">
+
+            <!-- Espacio para el logo -->
+            <Border Height="100" Background="#2E5A88" VerticalAlignment="Top">
+                <TextBlock
+                    Text="(Sin definir)"
+                    Foreground="White"
+                    FontSize="16"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontStyle="Italic" />
+            </Border>
+
+            <!-- Botones del menú con altura 40 y sin margen -->
             <Button
                 x:Name="MovimientosButton"
-                Margin="0,100"
+                Height="40"
+                Margin="0,0"
                 Background="#2E5A88"
                 Content="Movimientos"
                 Foreground="AliceBlue" />
+
             <Button
                 x:Name="ProductosButton"
-                Margin="0,100"
+                Height="40"
+                Margin="0,0"
                 Background="#2E5A88"
                 Content="Productos"
                 Foreground="AliceBlue" />
 
-        </StackPanel>
+            <Button
+                x:Name="ProveedoresButton"
+                Height="40"
+                Margin="0,0"
+                Background="#2E5A88"
+                Content="Proveedores"
+                Foreground="AliceBlue" />
 
+            <Button
+                x:Name="CategoriasUsuariosButton"
+                Height="40"
+                Margin="0,0"
+                Background="#2E5A88"
+                Content="Categorías Usuarios"
+                Foreground="AliceBlue" />
+
+            <Button
+                x:Name="RolesButton"
+                Height="40"
+                Margin="0,0"
+                Background="#2E5A88"
+                Content="Roles"
+                Foreground="AliceBlue" />
+        </StackPanel>
     </Grid>
 </Window>
