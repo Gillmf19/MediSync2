@@ -52,10 +52,10 @@
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="25"/>
                         <DataGridTextColumn Header="Producto" Binding="{Binding Producto}" Width="150"/>
-                        <DataGridTextColumn Header="Generado" Binding="{Binding Producto}" Width="100"/>
+                        <DataGridTextColumn Header="Generado" Binding="{Binding Generado}" Width="100"/>
                         <DataGridTextColumn Header="Cantidad" Binding="{Binding Cantidad}" Width="70"/>
-                        <DataGridTextColumn Header="Locacion" Binding="{Binding Cantidad}" Width="150"/>
-                        <DataGridTextColumn Header="Status" Binding="{Binding Tipo}" Width="80"/>
+                        <DataGridTextColumn Header="Locacion" Binding="{Binding Locacion}" Width="150"/>
+                        <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="80"/>
                         <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}" Width="150"/>
                     </DataGrid.Columns>
                 </DataGrid>
@@ -63,3 +63,4 @@
         </Border>
     </Grid>
 </Window>
+
