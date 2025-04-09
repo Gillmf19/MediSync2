@@ -24,5 +24,22 @@ namespace MediSync.Views
         {
             InitializeComponent();
         }
+
+
+        private void AgregarProductoButton_Click(object sender, RoutedEventArgs e)
+        {
+            AgregarProducto agregarProducto = new AgregarProducto();
+            agregarProducto.ShowDialog(); // Use ShowDialog to wait for the window to close
+
+            if (agregarProducto.ProductoAgregado)
+            {
+                // Refresh your product list or do whatever you need
+                MessageBox.Show("Producto agregado exitosamente!");
+            }
+            else
+            {
+                MessageBox.Show("Operación cancelada");
+            }
+        }
     }
 }

@@ -1,41 +1,93 @@
-﻿<UserControl x:Class="MediSync.Views.ProductosView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Grid Background="White" Margin="10">
-        <!-- Definición de filas para organizar la interfaz -->
+﻿<UserControl
+    x:Class="MediSync.Views.ProductosView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="10" Background="White">
+        <!--  Definición de filas para organizar la interfaz  -->
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <!-- Fila para la barra de búsqueda y botones -->
-            <RowDefinition Height="*"/>
-            <!-- Fila para la lista de productos -->
+            <RowDefinition Height="Auto" />
+            <!--  Fila para la barra de búsqueda y botones  -->
+            <RowDefinition Height="*" />
+            <!--  Fila para la lista de productos  -->
         </Grid.RowDefinitions>
 
-        <!-- Barra superior con búsqueda y acciones -->
-        <StackPanel Orientation="Horizontal" Margin="10" VerticalAlignment="Top" Grid.Row="0">
-            <!-- Búsqueda -->
+        <!--  Barra superior con búsqueda y acciones  -->
+        <StackPanel
+            Grid.Row="0"
+            Margin="10"
+            VerticalAlignment="Top"
+            Orientation="Horizontal">
+            <!--  Búsqueda  -->
             <Grid Width="300" Height="30">
-                <TextBox x:Name="BuscarTextBox" VerticalContentAlignment="Center"/>
+                <TextBox x:Name="BuscarTextBox" VerticalContentAlignment="Center" />
             </Grid>
 
-            <Button Content="🔍" Width="30" Height="30" Margin="5,0,10,0"/>
+            <Button
+                Width="30"
+                Height="30"
+                Margin="5,0,10,0"
+                Content="🔍" />
 
-            <!-- Botones de acción -->
-            <Button Content="Agregar" Width="80" Height="30" Margin="0,0,5,0" Background="#2E5A88" Foreground="White"/>
-            <Button Content="Editar" Width="80" Height="30" Margin="0,0,5,0" Background="#2E5A88" Foreground="White"/>
-            <Button Content="Eliminar" Width="80" Height="30" Background="#8B0000" Foreground="White"/>
+            <!--  Botones de acción  -->
+            <Button
+                x:Name="AgregarProductoButton"
+                Width="80"
+                Height="30"
+                Margin="0,0,5,0"
+                Background="#2E5A88"
+                Click="AgregarProductoButton_Click"
+                Content="Agregar"
+                Foreground="White" />
+            <Button
+                Width="80"
+                Height="30"
+                Margin="0,0,5,0"
+                Background="#2E5A88"
+                Content="Editar"
+                Foreground="White" />
+            <Button
+                Width="80"
+                Height="30"
+                Background="#8B0000"
+                Content="Eliminar"
+                Foreground="White" />
         </StackPanel>
 
-        <!-- Lista de productos -->
-        <ListView x:Name="ProductosListView" Margin="10" Grid.Row="1">
+        <!--  Lista de productos  -->
+        <ListView
+            x:Name="ProductosListView"
+            Grid.Row="1"
+            Margin="10">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Nombre" DisplayMemberBinding="{Binding Nombre}" Width="120"/>
-                    <GridViewColumn Header="Código de Barra" DisplayMemberBinding="{Binding CodigoBarra}" Width="120"/>
-                    <GridViewColumn Header="Unidad" DisplayMemberBinding="{Binding UnidadMedida}" Width="100"/>
-                    <GridViewColumn Header="Peso" DisplayMemberBinding="{Binding Peso}" Width="80"/>
-                    <GridViewColumn Header="Volumen" DisplayMemberBinding="{Binding Volumen}" Width="80"/>
-                    <GridViewColumn Header="Caducidad" DisplayMemberBinding="{Binding FechaCaducidad}" Width="120"/>
-                    <GridViewColumn Header="Categoría" DisplayMemberBinding="{Binding Categoria}" Width="100"/>
+                    <GridViewColumn
+                        Width="120"
+                        DisplayMemberBinding="{Binding Nombre}"
+                        Header="Nombre" />
+                    <GridViewColumn
+                        Width="120"
+                        DisplayMemberBinding="{Binding CodigoBarra}"
+                        Header="Código de Barra" />
+                    <GridViewColumn
+                        Width="100"
+                        DisplayMemberBinding="{Binding UnidadMedida}"
+                        Header="Unidad" />
+                    <GridViewColumn
+                        Width="80"
+                        DisplayMemberBinding="{Binding Peso}"
+                        Header="Peso" />
+                    <GridViewColumn
+                        Width="80"
+                        DisplayMemberBinding="{Binding Volumen}"
+                        Header="Volumen" />
+                    <GridViewColumn
+                        Width="120"
+                        DisplayMemberBinding="{Binding FechaCaducidad}"
+                        Header="Caducidad" />
+                    <GridViewColumn
+                        Width="100"
+                        DisplayMemberBinding="{Binding Categoria}"
+                        Header="Categoría" />
                 </GridView>
             </ListView.View>
         </ListView>
