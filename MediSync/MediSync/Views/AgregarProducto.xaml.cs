@@ -19,7 +19,6 @@ namespace MediSync.Views
     /// </summary>
     public partial class AgregarProducto : Window
     {
-        // Add this property to track if a product was added
         public bool ProductoAgregado { get; private set; } = false;
         public AgregarProducto()
         {
@@ -27,7 +26,7 @@ namespace MediSync.Views
         }
         private void BtnGuardar_Click(object sender, RoutedEventArgs e)
         {
-            // Validate inputs here
+
             if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
                 string.IsNullOrWhiteSpace(txtCantidad.Text) ||
                 cbCategoria.SelectedItem == null ||
@@ -37,7 +36,6 @@ namespace MediSync.Views
                 return;
             }
 
-            // If validation passes
             ProductoAgregado = true;
             this.Close();
         }

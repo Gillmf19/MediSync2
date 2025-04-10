@@ -24,7 +24,7 @@ namespace MediSync
 
         private void ProductosButton_Click(object sender, RoutedEventArgs e)
         {
-            ContenidoPrincipal.Content = new ProductosView(); // Load the Productos UserControl
+            ContenidoPrincipal.Content = new ProductosView();
 
         }
     }
