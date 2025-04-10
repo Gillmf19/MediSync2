@@ -10,18 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace MediSync.Views
 {
     /// <summary>
-    /// Lógica de interacción para Proveedores.xaml
+    /// Lógica de interacción para RequerimientosView.xaml
     /// </summary>
-    public partial class Proveedores : Window
+    public partial class RequerimientosView : UserControl
     {
-        public Proveedores()
+        public RequerimientosView()
         {
             InitializeComponent();
         }
+
     }
 }

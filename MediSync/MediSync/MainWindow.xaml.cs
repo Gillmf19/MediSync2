@@ -27,5 +27,15 @@ namespace MediSync
             ContenidoPrincipal.Content = new ProductosView();
 
         }
+
+        private void MovimientosButton_Click(object sender, RoutedEventArgs e)
+        {
+            ContenidoPrincipal.Content = new MovimientosView();
+        }
+
+        private void Requerimientos_Click(object sender, RoutedEventArgs e)
+        {
+            ContenidoPrincipal.Content = new RequerimientosView();
+        }
     }
 }
