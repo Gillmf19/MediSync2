@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Data.SqlClient;
 
 namespace MediSync.Views
 {
